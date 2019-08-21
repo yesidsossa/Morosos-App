@@ -12,9 +12,12 @@
 		A582A4FB230CB18800C4D336 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A582A4F9230CB18800C4D336 /* Main.storyboard */; };
 		A582A4FD230CB18900C4D336 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A582A4FC230CB18900C4D336 /* Assets.xcassets */; };
 		A582A500230CB18900C4D336 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A582A4FE230CB18900C4D336 /* LaunchScreen.storyboard */; };
+		C7C9DC6E19452860D38800AC /* Pods_MorososApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6768D13ABB625FF5C7574C2 /* Pods_MorososApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F1C0C52808B7F6B3B8349B7 /* Pods-MorososApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorososApp.release.xcconfig"; path = "Target Support Files/Pods-MorososApp/Pods-MorososApp.release.xcconfig"; sourceTree = "<group>"; };
+		4B7F95CACDC85B8B5A08F4BB /* Pods-MorososApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorososApp.debug.xcconfig"; path = "Target Support Files/Pods-MorososApp/Pods-MorososApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A582A4F2230CB18800C4D336 /* MorososApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MorososApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A582A4F5230CB18800C4D336 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A582A4F7230CB18800C4D336 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		A582A4FC230CB18900C4D336 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A582A4FF230CB18900C4D336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A582A501230CB18900C4D336 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6768D13ABB625FF5C7574C2 /* Pods_MorososApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MorososApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7C9DC6E19452860D38800AC /* Pods_MorososApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		743D06F29682B406609B39F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B7F95CACDC85B8B5A08F4BB /* Pods-MorososApp.debug.xcconfig */,
+				0F1C0C52808B7F6B3B8349B7 /* Pods-MorososApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A582A4E9230CB18800C4D336 = {
 			isa = PBXGroup;
 			children = (
 				A582A4F4230CB18800C4D336 /* MorososApp */,
 				A582A4F3230CB18800C4D336 /* Products */,
+				743D06F29682B406609B39F3 /* Pods */,
+				D824A1FFDD307E75F2530C26 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +81,14 @@
 			path = MorososApp;
 			sourceTree = "<group>";
 		};
+		D824A1FFDD307E75F2530C26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6768D13ABB625FF5C7574C2 /* Pods_MorososApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +96,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A582A504230CB18900C4D336 /* Build configuration list for PBXNativeTarget "MorososApp" */;
 			buildPhases = (
+				B8A0B7BB60E5CC89FF426A62 /* [CP] Check Pods Manifest.lock */,
 				A582A4EE230CB18800C4D336 /* Sources */,
 				A582A4EF230CB18800C4D336 /* Frameworks */,
 				A582A4F0230CB18800C4D336 /* Resources */,
@@ -129,6 +155,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B8A0B7BB60E5CC89FF426A62 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MorososApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A582A4EE230CB18800C4D336 /* Sources */ = {
@@ -280,6 +331,7 @@
 		};
 		A582A505230CB18900C4D336 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B7F95CACDC85B8B5A08F4BB /* Pods-MorososApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +349,7 @@
 		};
 		A582A506230CB18900C4D336 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F1C0C52808B7F6B3B8349B7 /* Pods-MorososApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
