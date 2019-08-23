@@ -28,6 +28,7 @@ PODS:
   - GoogleUtilities/Logger (6.2.5):
     - GoogleUtilities/Environment
   - leveldb-library (1.22)
+  - lottie-ios (3.1.2)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
@@ -36,6 +37,7 @@ PODS:
 
 DEPENDENCIES:
   - Firebase/Database
+  - lottie-ios
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -49,6 +51,7 @@ SPEC REPOS:
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
     - leveldb-library
+    - lottie-ios
     - nanopb
 
 SPEC CHECKSUMS:
@@ -62,8 +65,9 @@ SPEC CHECKSUMS:
   GoogleDataTransportCCTSupport: 6b545f7149111180763dc18c6f372c963de4a310
   GoogleUtilities: e7dc37039b19df7fe543479d3e4a02ac8d11bb69
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  lottie-ios: 49cd85b1f24f61a7708ad7ec76a523ab2d0e3100
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
 
-PODFILE CHECKSUM: 82531792c9e5744e709934035fb1c5eac37c2f7d
+PODFILE CHECKSUM: 8c81fee6bfe012d14e1931c1309a72e947ab539b
 
 COCOAPODS: 1.7.5
