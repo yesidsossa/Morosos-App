@@ -164,7 +164,7 @@
         <!--Usuarios-->
         <scene sceneID="6fd-c6-45X">
             <objects>
-                <viewController id="Bb0-os-2dV" sceneMemberID="viewController">
+                <viewController id="Bb0-os-2dV" customClass="DebtorViewController" customModule="MorososApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M6Q-kW-f9a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -184,6 +184,9 @@
                         <viewLayoutGuide key="safeArea" id="HX2-ci-4ka"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Usuarios" id="v4h-Ht-yr3"/>
+                    <connections>
+                        <outlet property="tableView" destination="AJ9-Ta-zdY" id="XLR-2X-imc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTR-WQ-JKw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

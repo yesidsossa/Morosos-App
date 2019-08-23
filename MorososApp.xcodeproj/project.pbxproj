@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		584899F5230E22B500BFD723 /* DebtorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584899F4230E22B500BFD723 /* DebtorViewController.swift */; };
+		58CBDEB4230E12C9001F0FD9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58CBDEB3230E12C9001F0FD9 /* GoogleService-Info.plist */; };
 		A582A4F6230CB18800C4D336 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A582A4F5230CB18800C4D336 /* AppDelegate.swift */; };
 		A582A4F8230CB18800C4D336 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A582A4F7230CB18800C4D336 /* ViewController.swift */; };
 		A582A4FB230CB18800C4D336 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A582A4F9230CB18800C4D336 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* Begin PBXFileReference section */
 		0F1C0C52808B7F6B3B8349B7 /* Pods-MorososApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorososApp.release.xcconfig"; path = "Target Support Files/Pods-MorososApp/Pods-MorososApp.release.xcconfig"; sourceTree = "<group>"; };
 		4B7F95CACDC85B8B5A08F4BB /* Pods-MorososApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorososApp.debug.xcconfig"; path = "Target Support Files/Pods-MorososApp/Pods-MorososApp.debug.xcconfig"; sourceTree = "<group>"; };
+		584899F4230E22B500BFD723 /* DebtorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DebtorViewController.swift; path = Controllers/DebtorViewController.swift; sourceTree = "<group>"; };
+		58CBDEB3230E12C9001F0FD9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A582A4F2230CB18800C4D336 /* MorososApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MorososApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A582A4F5230CB18800C4D336 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A582A4F7230CB18800C4D336 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +50,6 @@
 				4B7F95CACDC85B8B5A08F4BB /* Pods-MorososApp.debug.xcconfig */,
 				0F1C0C52808B7F6B3B8349B7 /* Pods-MorososApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -71,12 +74,14 @@
 		A582A4F4230CB18800C4D336 /* MorososApp */ = {
 			isa = PBXGroup;
 			children = (
+				58CBDEB3230E12C9001F0FD9 /* GoogleService-Info.plist */,
 				A582A4F5230CB18800C4D336 /* AppDelegate.swift */,
 				A582A4F7230CB18800C4D336 /* ViewController.swift */,
 				A582A4F9230CB18800C4D336 /* Main.storyboard */,
 				A582A4FC230CB18900C4D336 /* Assets.xcassets */,
 				A582A4FE230CB18900C4D336 /* LaunchScreen.storyboard */,
 				A582A501230CB18900C4D336 /* Info.plist */,
+				584899F4230E22B500BFD723 /* DebtorViewController.swift */,
 			);
 			path = MorososApp;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 				A582A4EE230CB18800C4D336 /* Sources */,
 				A582A4EF230CB18800C4D336 /* Frameworks */,
 				A582A4F0230CB18800C4D336 /* Resources */,
+				8BC270784EA51265D82B0284 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A582A500230CB18900C4D336 /* LaunchScreen.storyboard in Resources */,
+				58CBDEB4230E12C9001F0FD9 /* GoogleService-Info.plist in Resources */,
 				A582A4FD230CB18900C4D336 /* Assets.xcassets in Resources */,
 				A582A4FB230CB18800C4D336 /* Main.storyboard in Resources */,
 			);
@@ -157,6 +164,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8BC270784EA51265D82B0284 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MorososApp/Pods-MorososApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MorososApp/Pods-MorososApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MorososApp/Pods-MorososApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B8A0B7BB60E5CC89FF426A62 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -186,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				584899F5230E22B500BFD723 /* DebtorViewController.swift in Sources */,
 				A582A4F8230CB18800C4D336 /* ViewController.swift in Sources */,
 				A582A4F6230CB18800C4D336 /* AppDelegate.swift in Sources */,
 			);

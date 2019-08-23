@@ -7,5 +7,6 @@ target 'MorososApp' do
 
   # Pods for MorososApp
 
-
+  pod 'Firebase/Database'
+ 
 end
