@@ -8,5 +8,6 @@ target 'MorososApp' do
   # Pods for MorososApp
 
   pod 'Firebase/Database'
+pod 'lottie-ios'
  
 end
