@@ -15,11 +15,12 @@ class DebtorTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        recargarHuecas()
+    
+        load()
         getList()
     }
     
-    func recargarHuecas()  {
+    func load()  {
         refreshControl = UIRefreshControl()
         refreshControl?.backgroundColor = UIColor.white
         refreshControl?.tintColor = UIColor.gray
@@ -37,8 +38,12 @@ class DebtorTableViewController: UITableViewController {
             let value = response?["value"] as? String ?? ""
             let background = response?["background"] as? String ?? ""
             let icon = response?["icon"] as? String ?? ""
-            self.listItems.append(Debtor(name: name, value: value, background: background, icon: icon))
-        
+            
+            if(value != "0"){
+                self.listItems.append(Debtor(name: name, value: value, background: background, icon: icon))
+            }
+            self.tableView.estimatedRowHeight = 150.0
+            self.tableView.rowHeight = UITableView.automaticDimension
             self.refreshControl?.endRefreshing()
             self.tableView.reloadData()
         })
@@ -52,11 +57,15 @@ class DebtorTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listItems.count
     }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150;
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celID = "DebtorCellId"
         let cell = tableView.dequeueReusableCell(withIdentifier: celID, for: indexPath) as! DebtorTableViewCell
-        cell.labelName.text = listItems[indexPath.row].name
+        cell.setData(debtor: listItems[indexPath.row])
+    
         return cell
     }
 
