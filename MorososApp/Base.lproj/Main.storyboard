@@ -109,34 +109,6 @@
             </objects>
             <point key="canvasLocation" x="-994.20289855072474" y="-289.28571428571428"/>
         </scene>
-        <!--Morosos-->
-        <scene sceneID="g3J-VK-BYr">
-            <objects>
-                <viewController id="6O1-Rq-EYz" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="WPk-3t-QXS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G9X-ax-HNz">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.82896173631733128" blue="0.42928349734123039" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="KmH-z6-ZKB" firstAttribute="trailing" secondItem="G9X-ax-HNz" secondAttribute="trailing" id="07Z-yt-orh"/>
-                            <constraint firstItem="KmH-z6-ZKB" firstAttribute="bottom" secondItem="G9X-ax-HNz" secondAttribute="bottom" id="Bgs-IQ-63D"/>
-                            <constraint firstItem="G9X-ax-HNz" firstAttribute="leading" secondItem="KmH-z6-ZKB" secondAttribute="leading" id="DSJ-pa-ljK"/>
-                            <constraint firstItem="G9X-ax-HNz" firstAttribute="top" secondItem="KmH-z6-ZKB" secondAttribute="top" id="Qx4-Z9-Nom"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="KmH-z6-ZKB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Morosos" id="GPv-0N-eCe"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x4Z-eL-2CE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-75" y="436"/>
-        </scene>
         <!--Recaudos-->
         <scene sceneID="fUy-vm-BgG">
             <objects>
@@ -164,6 +136,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vyq-lN-pOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="791" y="436"/>
+        </scene>
+        <!--Morosos-->
+        <scene sceneID="e4l-7Q-OgN">
+            <objects>
+                <tableViewController id="Snd-y6-Cl0" customClass="DebtorTableViewController" customModule="MorososApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UxX-LB-b2y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DebtorCellId" id="U09-g4-Gh8" customClass="DebtorTableViewCell" customModule="MorososApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U09-g4-Gh8" id="QmC-jI-70A">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4T-z9-OlC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="S4T-z9-OlC" secondAttribute="bottom" constant="0.5" id="9qe-cK-HoY"/>
+                                        <constraint firstItem="S4T-z9-OlC" firstAttribute="top" secondItem="QmC-jI-70A" secondAttribute="top" id="LhG-Tc-YNP"/>
+                                        <constraint firstAttribute="trailing" secondItem="S4T-z9-OlC" secondAttribute="trailing" id="PyF-en-8zD"/>
+                                        <constraint firstItem="S4T-z9-OlC" firstAttribute="leading" secondItem="QmC-jI-70A" secondAttribute="leading" id="web-EJ-MKi"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelName" destination="S4T-z9-OlC" id="tg4-sI-AKP"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Snd-y6-Cl0" id="wdv-nA-vgS"/>
+                            <outlet property="delegate" destination="Snd-y6-Cl0" id="dnp-mw-clb"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Morosos" id="1YX-rh-QAD"/>
+                    <connections>
+                        <outlet property="tableView" destination="UxX-LB-b2y" id="k4g-LZ-Ne0"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CZ7-pS-Ork" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-75" y="492"/>
         </scene>
         <!--Usuarios-->
         <scene sceneID="6fd-c6-45X">
@@ -207,8 +228,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="ZxT-4H-YOM" kind="relationship" relationship="viewControllers" id="C5A-wz-WUk"/>
-                        <segue destination="6O1-Rq-EYz" kind="relationship" relationship="viewControllers" id="pWZ-Cp-z9b"/>
                         <segue destination="Bb0-os-2dV" kind="relationship" relationship="viewControllers" id="zQc-hC-PuR"/>
+                        <segue destination="Snd-y6-Cl0" kind="relationship" relationship="viewControllers" id="ft8-QQ-fjR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ils-Cx-3lI" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		584899F5230E22B500BFD723 /* DebtorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584899F4230E22B500BFD723 /* DebtorViewController.swift */; };
+		585FF58A23149DCC00159ADC /* DebtorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FF58923149DCC00159ADC /* DebtorTableViewController.swift */; };
+		585FF58D2314CCDE00159ADC /* DebtorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FF58C2314CCDE00159ADC /* DebtorTableViewCell.swift */; };
+		585FF5902314D15700159ADC /* Debtor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FF58F2314D15700159ADC /* Debtor.swift */; };
 		58A204E32310F0C60052B38C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58A204E22310F0C60052B38C /* GoogleService-Info.plist */; };
 		A582A4F6230CB18800C4D336 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A582A4F5230CB18800C4D336 /* AppDelegate.swift */; };
 		A582A4F8230CB18800C4D336 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A582A4F7230CB18800C4D336 /* ViewController.swift */; };
@@ -20,7 +22,9 @@
 /* Begin PBXFileReference section */
 		0F1C0C52808B7F6B3B8349B7 /* Pods-MorososApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorososApp.release.xcconfig"; path = "Target Support Files/Pods-MorososApp/Pods-MorososApp.release.xcconfig"; sourceTree = "<group>"; };
 		4B7F95CACDC85B8B5A08F4BB /* Pods-MorososApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MorososApp.debug.xcconfig"; path = "Target Support Files/Pods-MorososApp/Pods-MorososApp.debug.xcconfig"; sourceTree = "<group>"; };
-		584899F4230E22B500BFD723 /* DebtorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DebtorViewController.swift; path = Controllers/DebtorViewController.swift; sourceTree = "<group>"; };
+		585FF58923149DCC00159ADC /* DebtorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtorTableViewController.swift; sourceTree = "<group>"; };
+		585FF58C2314CCDE00159ADC /* DebtorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtorTableViewCell.swift; sourceTree = "<group>"; };
+		585FF58F2314D15700159ADC /* Debtor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debtor.swift; sourceTree = "<group>"; };
 		58A204E22310F0C60052B38C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A582A4F2230CB18800C4D336 /* MorososApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MorososApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A582A4F5230CB18800C4D336 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +48,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		585FF5842314986B00159ADC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				585FF58923149DCC00159ADC /* DebtorTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		585FF5852314997500159ADC /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		585FF58B2314CCA700159ADC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				585FF58C2314CCDE00159ADC /* DebtorTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		585FF58E2314D13800159ADC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				585FF58F2314D15700159ADC /* Debtor.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		743D06F29682B406609B39F3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +109,10 @@
 		A582A4F4230CB18800C4D336 /* MorososApp */ = {
 			isa = PBXGroup;
 			children = (
+				585FF58E2314D13800159ADC /* Models */,
+				585FF58B2314CCA700159ADC /* Cells */,
+				585FF5852314997500159ADC /* Sources */,
+				585FF5842314986B00159ADC /* Controller */,
 				58A204E22310F0C60052B38C /* GoogleService-Info.plist */,
 				A582A4F5230CB18800C4D336 /* AppDelegate.swift */,
 				A582A4F7230CB18800C4D336 /* ViewController.swift */,
@@ -81,7 +120,6 @@
 				A582A4FC230CB18900C4D336 /* Assets.xcassets */,
 				A582A4FE230CB18900C4D336 /* LaunchScreen.storyboard */,
 				A582A501230CB18900C4D336 /* Info.plist */,
-				584899F4230E22B500BFD723 /* DebtorViewController.swift */,
 			);
 			path = MorososApp;
 			sourceTree = "<group>";
@@ -210,9 +248,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				584899F5230E22B500BFD723 /* DebtorViewController.swift in Sources */,
 				A582A4F8230CB18800C4D336 /* ViewController.swift in Sources */,
 				A582A4F6230CB18800C4D336 /* AppDelegate.swift in Sources */,
+				585FF5902314D15700159ADC /* Debtor.swift in Sources */,
+				585FF58A23149DCC00159ADC /* DebtorTableViewController.swift in Sources */,
+				585FF58D2314CCDE00159ADC /* DebtorTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

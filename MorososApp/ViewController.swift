@@ -14,18 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ref = Database.database().reference()
-        
-        ref.child("deudor").observe(.childAdded, with: { (snapshot) -> Void in
-            
-            var newItems = [String]() //Error: Use of unresolved identifier 'FDataSnapshot'
-            
-            for item in snapshot.children {
-                newItems.append(item as! String)
-            }
-            
-        })
+      
     }
-    
 }
 
