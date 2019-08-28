@@ -10,6 +10,7 @@
 		58505F672316EEF4009F4504 /* PaymentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58505F662316EEF4009F4504 /* PaymentsTableViewController.swift */; };
 		58505F692316EFA4009F4504 /* RulesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58505F682316EFA4009F4504 /* RulesTableViewController.swift */; };
 		58505F6B2316F3C5009F4504 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58505F6A2316F3C5009F4504 /* Rule.swift */; };
+		58505F78231731C9009F4504 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58505F77231731C9009F4504 /* Payment.swift */; };
 		585FF58A23149DCC00159ADC /* DebtorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FF58923149DCC00159ADC /* DebtorTableViewController.swift */; };
 		585FF58D2314CCDE00159ADC /* DebtorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FF58C2314CCDE00159ADC /* DebtorTableViewCell.swift */; };
 		585FF5902314D15700159ADC /* Debtor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FF58F2314D15700159ADC /* Debtor.swift */; };
@@ -30,6 +31,7 @@
 		58505F662316EEF4009F4504 /* PaymentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsTableViewController.swift; sourceTree = "<group>"; };
 		58505F682316EFA4009F4504 /* RulesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesTableViewController.swift; sourceTree = "<group>"; };
 		58505F6A2316F3C5009F4504 /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
+		58505F77231731C9009F4504 /* Payment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		585FF58923149DCC00159ADC /* DebtorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtorTableViewController.swift; sourceTree = "<group>"; };
 		585FF58C2314CCDE00159ADC /* DebtorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtorTableViewCell.swift; sourceTree = "<group>"; };
 		585FF58F2314D15700159ADC /* Debtor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debtor.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		585FF58E2314D13800159ADC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				58505F77231731C9009F4504 /* Payment.swift */,
 				585FF58F2314D15700159ADC /* Debtor.swift */,
 				58505F6A2316F3C5009F4504 /* Rule.swift */,
 			);
@@ -266,6 +269,7 @@
 				A5D69DCA23171B8500CEE2C6 /* LoginViewController.swift in Sources */,
 				A582A4F8230CB18800C4D336 /* ViewController.swift in Sources */,
 				A582A4F6230CB18800C4D336 /* AppDelegate.swift in Sources */,
+				58505F78231731C9009F4504 /* Payment.swift in Sources */,
 				585FF5902314D15700159ADC /* Debtor.swift in Sources */,
 				585FF58A23149DCC00159ADC /* DebtorTableViewController.swift in Sources */,
 				58505F692316EFA4009F4504 /* RulesTableViewController.swift in Sources */,

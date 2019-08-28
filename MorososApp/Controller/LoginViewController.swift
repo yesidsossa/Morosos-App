@@ -28,11 +28,11 @@ class LoginViewController: UIViewController {
         return false
     }
     
-    func savePreference() -> Void {
+    func savePreference(){
        
     }
     
-    func goToNextController() -> Void {
+    func goToNextController() {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainMenuController") as! MainMenuViewController
         self.present(newViewController, animated: true, completion: nil)
@@ -41,6 +41,7 @@ class LoginViewController: UIViewController {
     @IBAction func loginAction(_ sender: Any) {
         if login(){
             savePreference()
+            goToNextController()
                    }else{
             let alert = UIAlertController(title: "¡Multa!", message: "Por haber ingresado el usuario y/o la contraseña incorrecta, debes mil", preferredStyle: .alert)
             
