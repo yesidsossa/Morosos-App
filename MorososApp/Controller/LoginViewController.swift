@@ -18,7 +18,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         loginButton.layer.cornerRadius = loginButton.frame.height/2
-        // Do any additional setup after loading the view.
     }
     
     func login() -> Bool {
@@ -29,7 +28,11 @@ class LoginViewController: UIViewController {
     }
     
     func savePreference() -> Void {
-       
+        let preferences = UserDefaults.standard
+        let isLoggedIn = "isLoggedIn"
+        
+        preferences.set(true, forKey: isLoggedIn)
+        preferences.synchronize()
     }
     
     func goToNextController() -> Void {
@@ -41,7 +44,8 @@ class LoginViewController: UIViewController {
     @IBAction func loginAction(_ sender: Any) {
         if login(){
             savePreference()
-                   }else{
+            goToNextController()
+            }else{
             let alert = UIAlertController(title: "¡Multa!", message: "Por haber ingresado el usuario y/o la contraseña incorrecta, debes mil", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
