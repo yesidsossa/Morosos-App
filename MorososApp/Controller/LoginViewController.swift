@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
         preferences.synchronize()
     }
     
-    func goToNextController() -> Void {
+    func goToNextController() {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainMenuController") as! MainMenuViewController
         self.present(newViewController, animated: true, completion: nil)
