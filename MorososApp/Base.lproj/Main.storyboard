@@ -35,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="-2014.4927536231885" y="-289.28571428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="FHq-gO-5Wl">
             <objects>
-                <viewController id="LgB-Bk-iQQ" sceneMemberID="viewController">
+                <viewController id="LgB-Bk-iQQ" customClass="LoginViewController" customModule="MorososApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eqb-1W-qM8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,31 +47,32 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEJ-Un-KSr">
-                                        <rect key="frame" x="30" y="534" width="354" height="30"/>
+                                        <rect key="frame" x="158" y="524" width="98" height="38"/>
                                         <color key="backgroundColor" red="0.22263866662979126" green="0.51446759700775146" blue="0.46666401624679565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="contentEdgeInsets" minX="30" minY="10" maxX="30" maxY="10"/>
                                         <state key="normal" title="Login">
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="sos-xy-Vrm" kind="show" id="x9A-9J-663"/>
+                                            <action selector="loginAction:" destination="LgB-Bk-iQQ" eventType="touchUpInside" id="luD-PF-N55"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PASSWORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gEZ-gU-pL6">
-                                        <rect key="frame" x="30" y="404" width="354" height="30"/>
+                                        <rect key="frame" x="50" y="414" width="314" height="30"/>
                                         <color key="backgroundColor" red="0.83137816190719604" green="0.83136242628097534" blue="0.83137315511703491" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vrl-dy-azb">
-                                        <rect key="frame" x="80" y="80" width="254" height="164"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bankIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Vrl-dy-azb">
+                                        <rect key="frame" x="80" y="100" width="254" height="164"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="164" id="VDa-Lw-q7b"/>
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USER NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BHr-za-K1c">
-                                        <rect key="frame" x="30" y="344" width="354" height="30"/>
+                                        <rect key="frame" x="50" y="364" width="314" height="30"/>
                                         <color key="backgroundColor" red="0.83137816190719604" green="0.83136242628097534" blue="0.83137315511703491" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -81,17 +82,16 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Vrl-dy-azb" secondAttribute="trailing" constant="80" id="1rd-fx-8wF"/>
-                                    <constraint firstItem="Vrl-dy-azb" firstAttribute="top" secondItem="gtS-zV-NiJ" secondAttribute="top" constant="80" id="3WA-Tk-0q8"/>
-                                    <constraint firstAttribute="trailing" secondItem="gEZ-gU-pL6" secondAttribute="trailing" constant="30" id="86I-Y7-iND"/>
-                                    <constraint firstItem="gEZ-gU-pL6" firstAttribute="top" secondItem="BHr-za-K1c" secondAttribute="bottom" constant="30" id="HTQ-hk-Do0"/>
+                                    <constraint firstItem="Vrl-dy-azb" firstAttribute="top" secondItem="gtS-zV-NiJ" secondAttribute="top" constant="100" id="3WA-Tk-0q8"/>
+                                    <constraint firstAttribute="trailing" secondItem="gEZ-gU-pL6" secondAttribute="trailing" constant="50" id="86I-Y7-iND"/>
+                                    <constraint firstItem="gEZ-gU-pL6" firstAttribute="top" secondItem="BHr-za-K1c" secondAttribute="bottom" constant="20" id="HTQ-hk-Do0"/>
                                     <constraint firstItem="BHr-za-K1c" firstAttribute="top" secondItem="Vrl-dy-azb" secondAttribute="bottom" constant="100" id="J1M-Uv-pEV"/>
-                                    <constraint firstAttribute="trailing" secondItem="BHr-za-K1c" secondAttribute="trailing" constant="30" id="Q4f-kZ-pxW"/>
-                                    <constraint firstItem="gEZ-gU-pL6" firstAttribute="leading" secondItem="gtS-zV-NiJ" secondAttribute="leading" constant="30" id="Xhq-JS-s0M"/>
-                                    <constraint firstItem="BHr-za-K1c" firstAttribute="leading" secondItem="gtS-zV-NiJ" secondAttribute="leading" constant="30" id="ZCB-QE-a1n"/>
-                                    <constraint firstItem="QEJ-Un-KSr" firstAttribute="top" secondItem="gEZ-gU-pL6" secondAttribute="bottom" constant="100" id="an5-xk-cEM"/>
+                                    <constraint firstAttribute="trailing" secondItem="BHr-za-K1c" secondAttribute="trailing" constant="50" id="Q4f-kZ-pxW"/>
+                                    <constraint firstItem="QEJ-Un-KSr" firstAttribute="centerX" secondItem="gtS-zV-NiJ" secondAttribute="centerX" id="Vps-rm-m8z"/>
+                                    <constraint firstItem="gEZ-gU-pL6" firstAttribute="leading" secondItem="gtS-zV-NiJ" secondAttribute="leading" constant="50" id="Xhq-JS-s0M"/>
+                                    <constraint firstItem="BHr-za-K1c" firstAttribute="leading" secondItem="gtS-zV-NiJ" secondAttribute="leading" constant="50" id="ZCB-QE-a1n"/>
+                                    <constraint firstItem="QEJ-Un-KSr" firstAttribute="top" secondItem="gEZ-gU-pL6" secondAttribute="bottom" constant="80" id="an5-xk-cEM"/>
                                     <constraint firstItem="Vrl-dy-azb" firstAttribute="leading" secondItem="gtS-zV-NiJ" secondAttribute="leading" constant="80" id="mKm-ms-DtS"/>
-                                    <constraint firstAttribute="trailing" secondItem="QEJ-Un-KSr" secondAttribute="trailing" constant="30" id="sil-B5-4Vg"/>
-                                    <constraint firstItem="QEJ-Un-KSr" firstAttribute="leading" secondItem="gtS-zV-NiJ" secondAttribute="leading" constant="30" id="zVG-bd-dvB"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -104,6 +104,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="emJ-po-Ry1"/>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="QEJ-Un-KSr" id="aTq-3F-O9n"/>
+                        <outlet property="passwordTextField" destination="gEZ-gU-pL6" id="9Xh-Y1-t0v"/>
+                        <outlet property="userNameTextField" destination="BHr-za-K1c" id="euv-37-OYk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yQ-XQ-rcZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -234,10 +239,10 @@
             </objects>
             <point key="canvasLocation" x="-994" y="481"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Menu View Controller-->
         <scene sceneID="fxK-8v-TaB">
             <objects>
-                <tabBarController id="sos-xy-Vrm" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainMenuController" id="sos-xy-Vrm" customClass="MainMenuViewController" customModule="MorososApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TzG-ka-cdg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -283,4 +288,7 @@
             <point key="canvasLocation" x="-75" y="481"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bankIcon" width="75" height="75"/>
+    </resources>
 </document>
