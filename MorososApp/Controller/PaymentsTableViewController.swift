@@ -21,8 +21,16 @@ class PaymentsTableViewController: UITableViewController {
         animationView.animation = animation
         animationView.contentMode = .scaleAspectFit
         animationView.translatesAutoresizingMaskIntoConstraints = false
-
+        load()
         getList()
+    }
+    func load()  {
+        refreshControl = UIRefreshControl()
+        refreshControl?.backgroundColor = UIColor.white
+        refreshControl?.tintColor = UIColor.gray
+        refreshControl?.addTarget(self, action: #selector(PaymentsTableViewController.getList), for: UIControl.Event.valueChanged)
+        let titulorefres = "Desliza para actualizar...";
+        refreshControl?.attributedTitle = NSAttributedString(string: titulorefres)
     }
     
     @objc func getList()  {
@@ -38,7 +46,7 @@ class PaymentsTableViewController: UITableViewController {
             }
             self.tableView.estimatedRowHeight = 44
             self.tableView.rowHeight = UITableView.automaticDimension
-            //self.refreshControl?.endRefreshing()
+            self.refreshControl?.endRefreshing()
             self.tableView.reloadData()
         })
         
