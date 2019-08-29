@@ -14,6 +14,7 @@
 		585FF58A23149DCC00159ADC /* DebtorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FF58923149DCC00159ADC /* DebtorTableViewController.swift */; };
 		585FF58D2314CCDE00159ADC /* DebtorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FF58C2314CCDE00159ADC /* DebtorTableViewCell.swift */; };
 		585FF5902314D15700159ADC /* Debtor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FF58F2314D15700159ADC /* Debtor.swift */; };
+		586C321123178B5000F9D3C1 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586C321023178B5000F9D3C1 /* NavigationController.swift */; };
 		589A56A4231740BC00C711D4 /* collecting_money.json in Resources */ = {isa = PBXBuildFile; fileRef = 589A56A3231740BC00C711D4 /* collecting_money.json */; };
 		589A56A7231745C200C711D4 /* splash_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 589A56A5231745C200C711D4 /* splash_animation.json */; };
 		589A56A8231745C200C711D4 /* money_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 589A56A6231745C200C711D4 /* money_animation.json */; };
@@ -40,6 +41,7 @@
 		585FF58923149DCC00159ADC /* DebtorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtorTableViewController.swift; sourceTree = "<group>"; };
 		585FF58C2314CCDE00159ADC /* DebtorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtorTableViewCell.swift; sourceTree = "<group>"; };
 		585FF58F2314D15700159ADC /* Debtor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debtor.swift; sourceTree = "<group>"; };
+		586C321023178B5000F9D3C1 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		589A56A3231740BC00C711D4 /* collecting_money.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = collecting_money.json; sourceTree = "<group>"; };
 		589A56A5231745C200C711D4 /* splash_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash_animation.json; sourceTree = "<group>"; };
 		589A56A6231745C200C711D4 /* money_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = money_animation.json; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				A5D69DC923171B8500CEE2C6 /* LoginViewController.swift */,
 				A5D69DCB2317248000CEE2C6 /* MainMenuViewController.swift */,
 				A5C4A8E8231736F5002143E8 /* SplashViewController.swift */,
+				586C321023178B5000F9D3C1 /* NavigationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				A582A4F6230CB18800C4D336 /* AppDelegate.swift in Sources */,
 				A5C4A8E9231736F5002143E8 /* SplashViewController.swift in Sources */,
 				58505F78231731C9009F4504 /* Payment.swift in Sources */,
+				586C321123178B5000F9D3C1 /* NavigationController.swift in Sources */,
 				585FF5902314D15700159ADC /* Debtor.swift in Sources */,
 				589A56AB23174CE300C711D4 /* PaymentTableViewCell.swift in Sources */,
 				585FF58A23149DCC00159ADC /* DebtorTableViewController.swift in Sources */,

@@ -247,10 +247,27 @@
             </objects>
             <point key="canvasLocation" x="-994" y="481"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aT0-n3-sGv">
+            <objects>
+                <navigationController storyboardIdentifier="mainMenuController" id="jxR-h2-vpX" customClass="NavigationController" customModule="MorososApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n22-no-QjO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sos-xy-Vrm" kind="relationship" relationship="rootViewController" id="MYR-MJ-hKJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w2z-AX-DtN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-75" y="-986"/>
+        </scene>
         <!--Main Menu View Controller-->
         <scene sceneID="fxK-8v-TaB">
             <objects>
-                <tabBarController storyboardIdentifier="mainMenuController" id="sos-xy-Vrm" customClass="MainMenuViewController" customModule="MorososApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="sos-xy-Vrm" customClass="MainMenuViewController" customModule="MorososApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="aav-iy-pHv"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TzG-ka-cdg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

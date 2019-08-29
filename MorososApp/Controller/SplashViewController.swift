@@ -154,7 +154,7 @@ class SplashViewController: UIViewController {
     
     func goToMainMenuController() {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainMenuController") as! MainMenuViewController
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainMenuController") as! UINavigationController
         self.present(newViewController, animated: true, completion: nil)
     }
 }

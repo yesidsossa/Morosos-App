@@ -40,7 +40,7 @@ class LoginViewController: UIViewController {
     
     func goToNextController() {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainMenuController") as! MainMenuViewController
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainMenuController") as! UINavigationController
         self.present(newViewController, animated: true, completion: nil)
     }
     
