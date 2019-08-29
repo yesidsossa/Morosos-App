@@ -13,13 +13,16 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    
+   
+    @IBAction func exit(_ sender: Any) {
+        self.hideKeyboardWhenTappedAround()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         loginButton.layer.cornerRadius = loginButton.frame.height/2
     }
-    
+  
     func login() -> Bool {
         if userNameTextField.text == "aportes" && passwordTextField.text == "voluntarios" {
             return true
@@ -51,5 +54,16 @@ class LoginViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
             self.present(alert, animated: true)
         }
+    }
+}
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }

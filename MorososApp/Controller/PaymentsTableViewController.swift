@@ -39,11 +39,10 @@ class PaymentsTableViewController: UITableViewController {
         databaseReference.child("payments").observe(.childAdded, with: { (snapshot) -> Void in
             let response = snapshot.value as? NSDictionary
             let name = response?["name"] as? String ?? ""
-            let value = response?["value"] as? String ?? ""
+            let value = response?["value"] as? Int ?? 0
             
-            if(value != "0"){
-                self.listItems.append(Payment(name: name, value: value))
-            }
+            self.listItems.append(Payment(name: name, value: value))
+            
             self.tableView.estimatedRowHeight = 44
             self.tableView.rowHeight = UITableView.automaticDimension
             self.refreshControl?.endRefreshing()
@@ -78,16 +77,12 @@ class PaymentsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell:UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: "paymentCell")
-        if (cell == nil)
-        {
-            cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "paymentCell")
-        }
-        cell?.textLabel?.text = listItems[indexPath.row].name
-        cell?.detailTextLabel?.text = listItems[indexPath.row].value
-        cell?.detailTextLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
         
-        return cell!
+        let celID = "paymentCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: celID, for: indexPath) as! PaymentTableViewCell
+        cell.setData(payment: listItems[indexPath.row])
+        
+        return cell
     }
 
 

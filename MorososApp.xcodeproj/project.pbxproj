@@ -17,6 +17,7 @@
 		589A56A4231740BC00C711D4 /* collecting_money.json in Resources */ = {isa = PBXBuildFile; fileRef = 589A56A3231740BC00C711D4 /* collecting_money.json */; };
 		589A56A7231745C200C711D4 /* splash_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 589A56A5231745C200C711D4 /* splash_animation.json */; };
 		589A56A8231745C200C711D4 /* money_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 589A56A6231745C200C711D4 /* money_animation.json */; };
+		589A56AB23174CE300C711D4 /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A56AA23174CE300C711D4 /* PaymentTableViewCell.swift */; };
 		58A204E32310F0C60052B38C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58A204E22310F0C60052B38C /* GoogleService-Info.plist */; };
 		A582A4F6230CB18800C4D336 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A582A4F5230CB18800C4D336 /* AppDelegate.swift */; };
 		A582A4F8230CB18800C4D336 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A582A4F7230CB18800C4D336 /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 		589A56A3231740BC00C711D4 /* collecting_money.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = collecting_money.json; sourceTree = "<group>"; };
 		589A56A5231745C200C711D4 /* splash_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash_animation.json; sourceTree = "<group>"; };
 		589A56A6231745C200C711D4 /* money_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = money_animation.json; sourceTree = "<group>"; };
+		589A56AA23174CE300C711D4 /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
 		58A204E22310F0C60052B38C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A582A4F2230CB18800C4D336 /* MorososApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MorososApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A582A4F5230CB18800C4D336 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				585FF58C2314CCDE00159ADC /* DebtorTableViewCell.swift */,
+				589A56AA23174CE300C711D4 /* PaymentTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				A5C4A8E9231736F5002143E8 /* SplashViewController.swift in Sources */,
 				58505F78231731C9009F4504 /* Payment.swift in Sources */,
 				585FF5902314D15700159ADC /* Debtor.swift in Sources */,
+				589A56AB23174CE300C711D4 /* PaymentTableViewCell.swift in Sources */,
 				585FF58A23149DCC00159ADC /* DebtorTableViewController.swift in Sources */,
 				58505F692316EFA4009F4504 /* RulesTableViewController.swift in Sources */,
 				A5D69DCC2317248000CEE2C6 /* MainMenuViewController.swift in Sources */,

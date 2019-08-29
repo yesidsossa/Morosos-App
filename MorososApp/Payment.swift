@@ -11,9 +11,9 @@ import UIKit
 class Payment: NSObject {
 
     var name : String!
-    var value : String!
+    var value : Int!
     
-    init(name : String, value : String) {
+    init(name : String, value : Int) {
         self.name = name
         self.value = value
     }
