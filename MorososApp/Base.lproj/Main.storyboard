@@ -301,7 +301,11 @@
             <objects>
                 <tabBarController id="sos-xy-Vrm" customClass="MainMenuViewController" customModule="MorososApp" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Morosos" id="aav-iy-pHv">
-                        <barButtonItem key="rightBarButtonItem" title="Exit" id="9d5-In-atV"/>
+                        <barButtonItem key="rightBarButtonItem" title="Exit" id="9d5-In-atV">
+                            <connections>
+                                <action selector="exit:" destination="sos-xy-Vrm" id="unt-wp-nAQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TzG-ka-cdg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

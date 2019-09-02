@@ -16,7 +16,14 @@ class MainMenuViewController: UITabBarController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func exit(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "¡Ups!", message: "De esta corrupción no te salvas", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
