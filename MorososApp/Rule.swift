@@ -16,4 +16,26 @@ class Rule: NSObject {
         self.rule = rule
         self.value = value
     }
+    
+    public func getPovertyImageName() -> String {
+        
+        if let cost = Int(value.replacingOccurrences(of: ".", with: ""))
+        {
+            switch cost {
+            case 0 ... 2000:
+                return "povertyLevel1"
+            case 2001 ... 4000:
+                return "povertyLevel2"
+            case 4001 ... 6000:
+                return "povertyLevel3"
+            default:
+                return "povertyUndefined"
+                break;
+            }
+        }
+        else
+        {
+            return "povertyUndefined"
+        }
+    }
 }

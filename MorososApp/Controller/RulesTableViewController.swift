@@ -56,16 +56,19 @@ class RulesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       
-        var cell:UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: "rulesCell")
-        if (cell == nil)
-        {
-            cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "rulesCell")
-        }
-        cell?.textLabel?.text = listItems[indexPath.row].rule
-        cell?.detailTextLabel?.text = listItems[indexPath.row].value
-        cell?.detailTextLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
+        var cell = tableView.dequeueReusableCell(withIdentifier: "rulesCell") as! RuleTableViewCell
+//        if (cell == nil)
+//        {
+//            cell = RulesTableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "rulesCell")
+//        }
+//        cell?.textLabel?.text = listItems[indexPath.row].rule
+//        cell?.detailTextLabel?.text = listItems[indexPath.row].value
+//        cell?.detailTextLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
         
-        return cell!
+//        cell.labelName.text = listItems[indexPath.row].rule
+//        cell.labelValue.text = listItems[indexPath.row].value
+        cell.setData(rule: listItems[indexPath.row])
+        return cell
     }
 
 }
