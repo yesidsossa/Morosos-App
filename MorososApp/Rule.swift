@@ -30,7 +30,6 @@ class Rule: NSObject {
                 return "povertyLevel3"
             default:
                 return "povertyUndefined"
-                break;
             }
         }
         else
