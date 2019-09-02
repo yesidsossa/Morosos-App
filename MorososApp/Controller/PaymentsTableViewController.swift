@@ -48,6 +48,7 @@ class PaymentsTableViewController: UITableViewController {
     
     @objc func getList()  {
         listItems.removeAll()
+        paymentValue = 0
         databaseReference = Database.database().reference()
         databaseReference.child("payments").observe(.childAdded, with: { (snapshot) -> Void in
             let response = snapshot.value as? NSDictionary
