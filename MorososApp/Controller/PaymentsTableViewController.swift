@@ -14,16 +14,29 @@ class PaymentsTableViewController: UITableViewController {
     var databaseReference: DatabaseReference!
     var listItems = [Payment] ()
     let animationView = AnimationView()
+    var paymentValue: Int = 0
+    var label : UILabel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        createViews()
+        load()
+        getList()
+    }
+    
+    func createViews() {
+        label = UILabel(frame: CGRect(x: 0, y: 20, width: tableView.frame.size.width, height: 50))
+        label.textAlignment = NSTextAlignment.center
+        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.numberOfLines = 0
+        view.addSubview(label)
+        
         let animation = Animation.named("collecting_money")
         animationView.animation = animation
         animationView.contentMode = .scaleAspectFit
         animationView.translatesAutoresizingMaskIntoConstraints = false
-        load()
-        getList()
     }
+    
     func load()  {
         refreshControl = UIRefreshControl()
         refreshControl?.backgroundColor = UIColor.white
@@ -42,7 +55,7 @@ class PaymentsTableViewController: UITableViewController {
             let value = response?["value"] as? Int ?? 0
             
             self.listItems.append(Payment(name: name, value: value))
-            
+            self.paymentValue += value
             self.tableView.estimatedRowHeight = 44
             self.tableView.rowHeight = UITableView.automaticDimension
             self.refreshControl?.endRefreshing()
@@ -51,6 +64,10 @@ class PaymentsTableViewController: UITableViewController {
         
     }
   
+    func setSummationPaymentValue() -> String{
+        
+        return "Recaudado\n" + String(self.paymentValue) + "$"
+    }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 210
@@ -77,7 +94,7 @@ class PaymentsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        label.text = setSummationPaymentValue()
         let celID = "paymentCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: celID, for: indexPath) as! PaymentTableViewCell
         cell.setData(payment: listItems[indexPath.row])
